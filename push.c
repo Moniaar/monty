@@ -1,34 +1,14 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
-
-typedef struct stack_s
-{
-	int n;
-	struct stack_s *prev;
-	struct stack_s *next;
-} stack_t;
-
-/* Function prototypes */
-void push(stack_t **stack, char *value, unsigned int line_number);
-void pall(stack_t **stack, unsigned int line_number);
-
-/* Global variable to represent the stack (doubly linked list) */
+#include "monty.h"
 stack_t *stack;
-
-int main(void)
-{
-	/* Example usage */
-	push(&stack, "1", 1);
-	push(&stack, "2", 2);
-	push(&stack, "3", 3);
-	push(&stack, "5", 5);
-	pall(&stack, 2);
-
-	return (0);
-}
-
-/* Function to push an element onto the stack */
+/**
+ * push - Pushes an element onto the stack
+ * @stack: A pointer to the stack (doubly linked list)
+ * @value: The value to be pushed onto the stack
+ * @line_number: The line number in the file
+ *
+ * Description: This function pushes an element with the given value onto the
+ * stack. It performs error checks and prints error messages if needed.
+ */
 void push(stack_t **stack, char *value, unsigned int line_number)
 {
 	int i;
@@ -66,18 +46,4 @@ void push(stack_t **stack, char *value, unsigned int line_number)
 		(*stack)->prev = new_node;
 
 	*stack = new_node;
-}
-
-/* Function to print all values on the stack */
-void pall(stack_t **stack, unsigned int line_number)
-{
-	stack_t *current = *stack;
-
-	(void)line_number; /* Not using line_number in this example */
-
-	while (current != NULL)
-	{
-		printf("%d\n", current->n);
-		current = current->next;
-	}
 }
