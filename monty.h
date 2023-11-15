@@ -47,4 +47,13 @@ void readFile(FILE *fd);
 void openFile(char *fileName);
 void print_error(int codeoferr, ...);
 
+
+/* Function prototypes */
+void push(stack_t **stack, char *value, unsigned int line_number);
+void pall(stack_t **stack, unsigned int line_number);
+
+/* Global variable to represent the stack (doubly linked list) */
+stack_t *stack;
+
+
 #endif
