@@ -42,5 +42,9 @@ typedef struct instruction_s
 extern stack_t *head;
 void addtop_elem(stack_t **stack, unsigned int line_number);
 void nop_opcode(stack_t **stack, unsigned int line_number);
+void free_node(stack_t *head);
+void readFile(FILE *fd);
+void openFile(char *fileName);
+void print_error(int codeoferr, ...);
 
 #endif
