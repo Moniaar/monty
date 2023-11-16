@@ -2,6 +2,7 @@
 #define MONTY_H
 
 #define _GNU_SOURCE
+
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
@@ -52,7 +53,7 @@ void findFuncs(char *, char *, int, int);
 /*Stack operations*/
 stack_t *createNode(int n);
 void freeNodes(void);
-void printStack(stack_t **, unsigned int);
+void pall(stack_t **, unsigned int);
 void addnodeTos(stack_t **, unsigned int);
 void adddToqueue(stack_t **, unsigned int);
 
