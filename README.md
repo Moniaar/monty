@@ -2,11 +2,14 @@
 
 Be aware..this is just a draft. I will make it better after taking a nap
 
-Monty is a scripting language. what we are supposed to do is create an intepreter for that language.
+## What is Monty language if you don't know come to see the secret here ##
+Monty is a scripting language, **more on this
+
+what we are supposed to create an intepreter for that language.
 
 mostly scripts of monty have a .m extension. 
 
-for exampe let us say there is a script file called new.m
+for example let us say there is a script file called new.m
 
 Then that file will haev a list of commands in it line by line .
 
