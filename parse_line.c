@@ -15,22 +15,22 @@
 
 int parseline(char *buffer, int line_number, int format)
 {
-        char *opcd, *v;
-        const char *delim = "\n ";
+	char *opcd, *v;
+	const char *delim = "\n ";
 
-        if (buffer == NULL)
-                error_mesg(4);
+	if (buffer == NULL)
+		error_mesg(4);
 
-        opcd = strtok(buffer, delim);
-        if (opcd == NULL)
-                return (format);
-        v = strtok(NULL, delim);
+	opcd = strtok(buffer, delim);
+	if (opcd == NULL)
+		return (format);
+	v = strtok(NULL, delim);
 
-        if (strcmp(opcd, "stack") == 0)
-                return (0);
-        if (strcmp(opcd, "queue") == 0)
-                return (1);
+	if (strcmp(opcd, "stack") == 0)
+		return (0);
+	if (strcmp(opcd, "queue") == 0)
+		return (1);
 
-        findFuncs(opcd, v, line_number, format);
-        return (format);
+	findFuncs(opcd, v, line_number, format);
+	return (format);
 }
