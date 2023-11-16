@@ -32,7 +32,7 @@ that is basically a monty script.
 
 So to have your monty interpreter
 
-you open new,m with functions like f open and close it with fclose when you are done with it.
+you open new.m with functions like f open and close it with fclose when you are done with it.
 
 its implementation is ./monty new.m
 
@@ -47,7 +47,7 @@ use get line or fgets for the line like we used in a command line interpreter.
 
 so after that you tokenize it based on delimiters. 
 
-so forexamlple in new,m
+so forexamlple in new.m
 
 push 2 
 
