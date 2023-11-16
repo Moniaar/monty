@@ -9,13 +9,13 @@
  */
 void printAscii(stack_t **stack, unsigned int line_number)
 {
-        int a;
+	int a;
 
-        if (stack == NULL || *stack == NULL)
-                stringErr(11, line_number);
+	if (stack == NULL || *stack == NULL)
+		stringErr(11, line_number);
 
-        a = (*stack)->n;
-        if (a < 0 || a > 127)
-                stringErr(10, line_number);
-        printf("%c\n", a);
+	a = (*stack)->n;
+	if (a < 0 || a > 127)
+		stringErr(10, line_number);
+	printf("%c\n", a);
 }
