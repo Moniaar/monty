@@ -19,31 +19,31 @@
 
 void callfuncs(op_func func, char *op, char *val, int ln, int format)
 {
-        stack_t *Node;
-        int flag;
-        int k;
+	stack_t *Node;
+	int flag;
+	int k;
 
-        flag = 1;
-        if (strcmp(op, "push") == 0)
-        {
-                if (val != NULL && val[0] == '-')
-                {
-                        val = val + 1;
-                        flag = -1;
-                }
-                if (val == NULL)
-                        error_mesg(5, ln);
-                for (k = 0; val[k] != '\0'; k++)
-                {
-                        if (isdigit(val[k]) == 0)
-                                error_mesg(5, ln);
-                }
-                Node = createNode(atoi(val) * flag);
-                if (format == 0)
-                        func(&Node, ln);
-                if (format == 1)
-                        adddToqueue(&Node, ln);
-        }
-        else
-                func(&head, ln);
+	flag = 1;
+	if (strcmp(op, "push") == 0)
+	{
+		if (val != NULL && val[0] == '-')
+		{
+			val = val + 1;
+			flag = -1;
+		}
+		if (val == NULL)
+			error_mesg(5, ln);
+		for (k = 0; val[k] != '\0'; k++)
+		{
+			if (isdigit(val[k]) == 0)
+				error_mesg(5, ln);
+		}
+		Node = createNode(atoi(val) * flag);
+		if (format == 0)
+			func(&Node, ln);
+		if (format == 1)
+			adddToqueue(&Node, ln);
+	}
+	else
+		func(&head, ln);
 }
