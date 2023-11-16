@@ -28,14 +28,14 @@ void addnodeTos(stack_t **new_node, __attribute__((unused))unsigned int ln)
 
 
 /**
- * printStack - This function prints the elements of the stack
+ * pall - This function prints the elements of the stack
  *
  * @stack: Pointer to a pointer pointing to top node of the stack.
  *
  * @line_number: line number of  the opcode.
  */
 
-void printStack(stack_t **stack, unsigned int line_number)
+void pall(stack_t **stack, unsigned int line_number)
 {
 	stack_t *temp;
 
