@@ -17,8 +17,11 @@ for example it might have
 
 
 push 2
+
 pop
+
 pall
+
 push 3
 
 
