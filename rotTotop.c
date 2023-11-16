@@ -10,19 +10,19 @@
 
 void rotLastTop(stack_t **stack, __attribute__((unused))unsigned int ln)
 {
-        stack_t *temp;
+	stack_t *temp;
 
-        if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-                return;
+	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
+		return;
 
-        temp = *stack;
+	temp = *stack;
 
-        while (temp->next != NULL)
-                temp = temp->next;
+	while (temp->next != NULL)
+		temp = temp->next;
 
-        temp->next = *stack;
-        temp->prev->next = NULL;
-        temp->prev = NULL;
-        (*stack)->prev = temp;
-        (*stack) = temp;
+	temp->next = *stack;
+	temp->prev->next = NULL;
+	temp->prev = NULL;
+	(*stack)->prev = temp;
+	(*stack) = temp;
 }
