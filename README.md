@@ -35,7 +35,7 @@ Your push function for example will look like:
 ## How to install it?: ##
 compile with the following:
     ` gcc -Wall -Werror -Wextra -pedantic *.c -o monty ` 
-### concpets you need to make yourself familier with before diving here ###
+### Concpets you need to make yourself familier with before diving here ###
 1. DMA (Dynamic Memory Allocation)
 2. Stacks and Queues
 3. Data structures and algorithems basics
